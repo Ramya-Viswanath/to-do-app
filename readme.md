@@ -19,6 +19,7 @@ Frontend: HTML, CSS
 Database: SQLite 
 Tools: Git, GitHub, VS Code
 
+---
 
 Getting Started
 1. Clone the repo
@@ -49,6 +50,7 @@ Ramya Viswanath
 📧 ramya.viswanath99@gmail.com
 🌐 GitHub - @Ramya-Viswanath
 
+---
 
 Project Structure
 
@@ -63,3 +65,5 @@ static:	CSS styling used in templates
 manage.py:	Tool to run and manage your Django project
 
 db.sqlite3:	Local database (automatically created)
+
+---
