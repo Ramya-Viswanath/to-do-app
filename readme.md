@@ -53,8 +53,13 @@ Ramya Viswanath
 Project Structure
 
 todoproject: Django project settings and root URL configuration
+
 tasks app: Main application logic for managing to-do tasks
+
 templates: HTML templates for rendering UI
+
 static:	CSS styling used in templates
+
 manage.py:	Tool to run and manage your Django project
+
 db.sqlite3:	Local database (automatically created)
