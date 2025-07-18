@@ -25,21 +25,30 @@ Tools: Git, GitHub, VS Code
 ---
 
 Getting Started
+
+
 1. Clone the repo
 
 git clone https://github.com/Ramya-Viswanath/to-do-app.git
+
 cd to-do-app
+
 
 2. Set up virtual environment
 
 python3 -m venv venv
+
 source venv/bin/activate
+
 pip install -r requirements.txt
+
 
 3. Run migrations
 
 python manage.py makemigrations
+
 python manage.py migrate
+
 
 4. Run the server
 
@@ -49,8 +58,9 @@ python manage.py runserverv
 This project is open-source and available under the MIT License.
 
 Author
-Ramya Viswanath
-📧 ramya.viswanath99@gmail.com
+
+Ramya Viswanath | 
+📧 ramya.viswanath99@gmail.com | 
 🌐 GitHub - @Ramya-Viswanath
 
 ---
