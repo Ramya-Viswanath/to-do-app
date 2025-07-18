@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{%load static %}
+
+{% block title %}Login - To-Do Planner{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/login.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <div class="login-container">
+    <h1>Welcome to your Daily Planner</h1>
+
+    <!-- Motivational Section -->
+    <div class="motivation-section">
+      <h2>✨ Consistency is the Key</h2>
+      <ul>
+        <li><p>Build discipline one day at a time. </p></li>
+        <li><p>Create your personal to-do lists.</p></li>
+        <li><p>Track your tasks, complete them, and grow every day.</p></li>
+        <li><p>Sign up and start your journey to a more productive life today!</p></li>
+      </ul>
+      
+    </div>
+
+    
+    <!-- Login Form -->
+    <form method="post" action="{% url 'login' %}">
+      {% csrf_token %}
+      <label for="id_username">Username:</label><br />
+      <input type="text" name="username" id="id_username" required autofocus /><br /><br />
+
+      <label for="id_password">Password:</label><br />
+      <input type="password" name="password" id="id_password" required /><br /><br />
+
+      <button type="submit">Login</button>
+    </form>
+
+    <p>Don't have an account? <a href="{% url 'signup' %}">Sign up here</a>.</p>
+  </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+<h1>To-Do Tasks</h1>
+
+<a href="{% url 'task-create' %}">Add New Task</a>
+
+<h2>Pending Tasks</h2>
+<ul>
+  {% for task in tasks %}
+    <li>
+      <a href="{% url 'task-detail' task.pk %}">
+        {{ task.title }} - <span style="color:{{ task.get_priority_color }}">{{ task.priority }}</span>
+      </a>
+      [<a href="{% url 'task-edit' task.pk %}">Edit</a>]
+      [<a href="{% url 'task-delete' task.pk %}">Delete</a>]
+    </li>
+  {% empty %}
+    <li>No pending tasks</li>
+  {% endfor %}
+</ul>
+
+<h2>Completed Tasks</h2>
+<ul>
+  {% for task in completed_tasks %}
+    <li>{{ task.title }} - Completed</li>
+  {% empty %}
+    <li>No completed tasks</li>
+  {% endfor %}
+</ul>

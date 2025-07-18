@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Task List{% endblock %}
+
+{% block extra_css %}
+
+<link rel="stylesheet" href="{% static 'css/task_list.css' %}">
+{% endblock %}
+
+{% block content %}
+<h1>Day-to-Day Tasks</h1>
+<p class = "date">Today is {{ today_date }}</p>
+
+  <div class="task-controls">
+    <a href="{% url 'task-create' %}" class="btn">➕ Add New Task</a>
+  </div>
+
+  <h2>📌 Pending Tasks</h2>
+  <div class="task-table-wrapper">
+  <table class="task-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Priority</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for task in pending_tasks %}
+        <tr>
+          <td>{{ task.title }}</td>
+          <td>{{ task.date }}</td>
+          <td>{{ task.time|default:"--" }}</td>
+          <td class="priority-{{ task.priority|lower }}">{{ task.priority|capfirst }}</td>
+          <td>
+            <a href="{% url 'task-detail' task.id %}">View</a> |
+            <a href="{% url 'task-edit' task.id %}">Edit</a> |
+            <a href="{% url 'task-delete' task.id %}">Delete</a>
+          </td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="5">No pending tasks for today.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+  <h2>✅ Completed Tasks</h2>
+  <div class="task-table-wrapper">
+  <table class="task-table completed-table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Time</th>
+        <th>Priority</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for task in completed_tasks %}
+        <tr class="completed">
+          <td>{{ task.title }}</td>
+          <td>{{ task.date }}</td>
+          <td>{{ task.time|default:"--" }}</td>
+          <td class="priority-{{ task.priority|lower }}">{{ task.priority|capfirst }}</td>
+          <td>
+            <a href="{% url 'task-detail' task.id %}">View</a> |
+            <a href="{% url 'task-edit' task.id %}">Edit</a> |
+            <a href="{% url 'task-delete' task.id %}">Delete</a>
+          </td>
+        </tr>
+      {% empty %}
+        <tr>
+          <td colspan="5">No completed tasks for today.</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

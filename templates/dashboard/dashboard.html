@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+  
+  <h1>Welcome to your Day-to-Day Tasks</h1>
+  <p class="dashboard-greeting">Welcome, {{ user.first_name }}!</p>
+  <p class="dashboard-greeting"> Today is {{ today_date }}</p>
+
+
+  <div class="task-summary">
+    <p><strong>Pending Tasks:</strong> {{ pending_count }}</p>
+    <p><strong>Completed Tasks:</strong> {{ completed_count }}</p>
+  </div>
+{% endif %}
+
+
+<ul class="t_lists">
+  <li><a href="{% url 'task-list' %}">View Tasks</a></li>
+  <li><a href="{% url 'task-create' %}">Add New Task</a></li>
+</ul>
+{% endblock %}
+
+
+
+
+{% comment %} {% block content %}
+{% if user.is_authenticated %}
+<p>Welcome, {{ user.first_name }} {{ user.last_name }}!</p>
+{% endif %}
+  <hr />
+
+  {% block content %}
+{% if user.is_authenticated %}
+  <h2 class="dashboard-heading">TO-DO-Today</h2>
+  <p class="dashboard-greeting">Welcome, {{ user.first_name }}!</p>
+
+  <div class="task-summary">
+    <p><strong>Pending Tasks:</strong> {{ pending_count }}</p>
+    <p><strong>Completed Tasks:</strong> {{ completed_count }}</p>
+  </div>
+{% endif %}
+
+<hr /> {% endcomment %}

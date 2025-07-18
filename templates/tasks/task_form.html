@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+  {% if form.instance.pk %}
+    Edit Task
+  {% else %}
+    Add New Task
+  {% endif %}
+{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/task_form.css' %}">
+<link rel="stylesheet" href="{% static 'css/styles.css'%}">
+{% endblock %}
+
+{% block content %}
+<main class="form-container">
+  <h1>
+    {% if form.instance.pk %}
+      Edit Task
+    {% else %}
+      Add New Task
+    {% endif %}
+  </h1>
+
+  <form method="post" novalidate>
+    {% csrf_token %}
+    {{ form.non_field_errors }}
+    
+    {% for field in form %}
+      <div class="form-group">
+        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+        {{ field }}
+        {% if field.help_text %}
+          <small class="help-text">{{ field.help_text }}</small>
+        {% endif %}
+        {% if field.errors %}
+          <div class="error">{{ field.errors|striptags }}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+    
+    <button type="submit" class="btn">
+      {% if form.instance.pk %}
+        Save Changes
+      {% else %}
+        Add Task
+      {% endif %}
+    </button>
+  </form>
+
+  <a href="{% url 'task-list' %}" class="back-link">← Back to Task List</a>
+</main>
+{% endblock %}
+
+
+{% comment %} {% extends 'base.html' %}
+
+{% block title %}
+  {% if task %}Edit Task{% else %}Create New Task{% endif %}
+{% endblock %}
+
+{% block content %}
+  <h1>
+    {% if task %}Edit Task{% else %}Create New Task{% endif %}
+  </h1>
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" class="btn">
+      {% if task %}Update Task{% else %}Create Task{% endif %}
+    </button>
+  </form>
+
+  <a href="{% url 'task-list' %}">Back to Task List</a>
+{% endblock %} {% endcomment %}

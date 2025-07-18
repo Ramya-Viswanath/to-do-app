@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}To-Do App{% endblock %}</title>
+    
+    <!-- Main shared CSS -->
+   
+    
+    <!-- Page-specific CSS -->
+    {% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    {% endblock %}
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    {% if request.resolver_match.url_name not in 'login signup' %}
+    <header>
+        <nav class="main-nav">
+            <div class="nav-left">
+                <a href="{% url 'dashboard' %}">Dashboard</a>
+                {% comment %} <a href="{% url 'task-list' %}">Task List</a> {% endcomment %}
+            </div>
+            <div class="page-title">
+            <p class='title-name'>To-Do To-Day</p>
+            </div>
+            <div class="nav-right">
+                {% if user.is_authenticated %}
+                <form method="post" action="{% url 'logout' %}" class="logout-form">
+                    {% csrf_token %}
+                    <button type="submit">Logout</button>
+                </form>
+                {% else %}
+                <a href="{% url 'login' %}">Login</a> |
+                <a href="{% url 'signup' %}">Sign Up</a>
+                {% endif %}
+            </div>
+        </nav>
+    </header>
+    {%else%}
+    <nav class="main-nav">
+        <div>
+        </div>
+        <div class="page-title">
+            <p class='title-name'>To-Do To-Day</p>
+        </div>
+        <div>
+        </div>
+    </nav>
+    {% endif %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your To-Do App</p>
+    </footer>
+</body>
+</html>
