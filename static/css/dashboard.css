@@ -1,0 +1,131 @@
+body {
+    background-color: #e0f7fa; 
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  
+  /* Center container with white background and subtle shadow */
+  main {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px; /* match base border-radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  }
+  
+
+  /* Dashboard heading */
+  h1 {
+    text-align: center;
+    color: #00796b; /* teal */
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  /* Paragraph below heading */
+  .task-summary p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #555;
+  }
+  
+  /* List styling */
+  ul {
+    max-width: 300px;
+    margin: 0 auto;
+    padding-left: 40px;
+    list-style-type: disc;
+  }
+  
+  ul li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+  }
+  
+  ul li a {
+    color: #00796b; 
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ====== Header Nav ====== */
+  
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796b; /* match base nav */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-nav a,
+  .main-nav button {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  .main-nav .page-title .title-name {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px
+  }
+
+  .main-nav a:hover,
+  .main-nav button:hover {
+    text-decoration: underline;
+  }
+  
+  .nav-left a {
+    margin-right: 15px;
+  }
+  
+  .logout-form {
+    margin: 0;
+  }
+  
+
+  .dashboard-heading {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .dashboard-greeting {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    color: #555;
+  }
+  
+  .task-summary {
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .task-summary p {
+    margin: 5px;
+    font-size: 1.1em;
+  }
+  
+
+
+  footer p {
+    text-align: center;  /* or right */
+    margin: 0;
+    padding: 10px 0;
+    color: #555;  /* optional color */
+    font-size: 0.9em;
+  }

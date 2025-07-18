@@ -1,0 +1,119 @@
+body {
+    background-color: #e0f7fa; 
+    font-family: "Roboto Condensed", sans-serif; 
+    color: #333;
+  }
+  
+  /* Center container with white background and subtle shadow */
+  main {
+    max-width: 600px;
+    align-items: center;
+
+    margin: 60px auto;
+    background: white;
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796b;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-nav .page-title .title-name {
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+  }
+
+  
+  .login-container main {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+  
+
+.login-container {
+    max-width: 100%;
+    margin: 50px auto;
+    padding: 30px 25px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto Condensed", sans-serif;
+    color: #333;
+    text-align: center;
+  }
+  
+  .login-container h1 {
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #00796b;
+  }
+  
+  .login-container p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+  
+  .login-container form label {
+    display: block;
+    font-weight: 600;
+    margin-top: 10px;
+    text-align: left;
+  }
+  
+  .login-container input[type="text"],
+  .login-container input[type="password"],
+  .login-container input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  
+  .login-container button.btn {
+    margin-top: 20px;
+    background-color: #5a67d8;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-container button.btn:hover {
+    background-color: #434190;
+  }
+  
+  .login-container a {
+    color: #00796b;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  
+  .login-container a:hover {
+    text-decoration: underline;
+  }
+  
+
+  footer p {
+    text-align: center;  /* or right */
+    margin: 0;
+    padding: 10px 0;
+    color: #555;  /* optional color */
+    font-size: 0.9em;
+  }
