@@ -15,8 +15,11 @@ View all, completed, and pending tasks
 Tech Stack
 
 Backend: Django, Django REST Framework
+
 Frontend: HTML, CSS
+
 Database: SQLite 
+
 Tools: Git, GitHub, VS Code
 
 ---
