@@ -18,9 +18,10 @@ from django.contrib import admin
 from django.urls import path, include
 from tasks import views
 from accounts import views as accounts_views
+from django.views.generic import RedirectView
 
 urlpatterns = [
-    path('admin/',include('accounts.urls')),
+    path('', RedirectView.as_view(url='/accounts/login/')),
     path('admin/', admin.site.urls),
     path('tasks/', include('tasks.urls')),
     path('accounts/', include('accounts.urls')),
