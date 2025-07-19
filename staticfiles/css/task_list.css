@@ -1,0 +1,156 @@
+body {
+  background-color: #e0f7fa; /* Use same light teal-blue as base */
+  font-family: "Roboto Condensed", sans-serif; /* match base */
+  color: #333;
+}
+
+/* Center container with white background and subtle shadow */
+main {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 8px; /* match base border-radius */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796b; 
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-nav a,
+  .main-nav button {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .main-nav a:hover,
+  .main-nav button:hover {
+    text-decoration: underline;
+  }
+  
+  .nav-left a {
+    margin-right: 15px;
+  } 
+  
+  .logout-form {
+    margin: 0;
+  } 
+  
+  .task-controls {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+    /* Dashboard heading */
+h1 {
+  text-align: center;
+  color: #00796b; /* teal */
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+  .date{
+    text-align: center;
+    padding: 10px
+  }
+  .task-table {
+    width: 900px;
+    margin: 0 auto 40px auto;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .task-table th, .task-table td {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    text-align: center;
+  }
+  
+  .task-table thead {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  .task-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .priority-high {
+    color: #d60000;
+    font-weight: bold;
+  }
+  
+  .priority-medium {
+    color: #f57c00;
+    font-weight: bold;
+  }
+  
+  .priority-low {
+    color: #388e3c;
+    font-weight: bold;
+  }
+  
+.completed-table td {
+    /* color: #444; */
+    font-style: italic;
+  }
+  
+  .welcome-msg {
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .subtext {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.6em;
+    color: #222;
+  }
+  
+  .btn {
+    background-color: #5a67d8;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  
+  .btn:hover {
+    background-color: #434190;
+  }
+  
+  .main-nav .page-title .title-name{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px
+  }
+
+  footer p {
+    text-align: center;  /* or right */
+    margin: 0;
+    padding: 10px 0;
+    color: #555;  /* optional color */
+    font-size: 0.9em;
+  }

@@ -1,0 +1,116 @@
+body {
+    background-color: #e0f7fa; 
+    font-family: "Roboto Condensed", sans-serif; 
+    color: #333;
+  }
+  
+  /* Center container with white background and subtle shadow */
+  main {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px; /* match base border-radius */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  }
+  
+
+  /* Dashboard heading */
+  h1 {
+    text-align: center;
+    color: #00796b; /* teal */
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  /* Paragraph below heading */
+  .delete {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #555;
+  }
+  
+ 
+  /* ====== Header Nav ====== */
+  
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796b; /* match base nav */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-nav a,
+  .main-nav button {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .main-nav a:hover,
+  .main-nav button:hover {
+    text-decoration: underline;
+  }
+  
+  .nav-left a {
+    margin-right: 15px;
+  }
+  
+  .logout-form {
+    margin: 0;
+  }
+  
+
+
+.btn {
+    background-color: green; /* blue-purple */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #434190;
+  }
+  
+  /* Danger button for delete */
+  .btn-danger {
+    background-color: #d60000; /* bright red */
+  }
+  
+  .btn-danger:hover {
+    background-color: #a30000;
+  }
+  
+  /* Optional: style for links used as buttons */
+  a.btn {
+    text-decoration: none;
+  }
+  
+.main-nav .page-title .title-name {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px
+  }
+
+  footer p {
+    text-align: center;  /* or right */
+    margin: 0;
+    padding: 10px 0;
+    color: #555;  /* optional color */
+    font-size: 0.9em;
+  }

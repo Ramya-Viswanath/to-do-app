@@ -1,0 +1,163 @@
+body {
+  background-color: #e0f7fa; /* Use same light teal-blue as base */
+  font-family: "Roboto Condensed", sans-serif; /* match base */
+  color: #333;
+}
+
+/* Center container with white background and subtle shadow */
+main {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  background: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* subtle shadow */
+}
+
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #00796b; /* match base nav */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-nav a,
+.main-nav button {
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.main-nav a:hover,
+.main-nav button:hover {
+  text-decoration: underline;
+}
+
+.main-nav .page-title .title-name {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 40px
+}
+
+.nav-left a {
+  margin-right: 15px;
+}
+
+
+.logout-form {
+  margin: 0;
+}
+
+/* Dashboard heading */
+h1 {
+  text-align: center;
+  color: #00796b; /* teal */
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+/* Paragraph below heading */
+p {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  color: #555;
+}
+
+/* List styling */
+ul {
+  max-width: 300px;
+  margin: 0 auto;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+ul li {
+  margin-bottom: 12px;
+  font-size: 1.1rem;
+}
+
+ul li a {
+  color: #00796b; /* teal link */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+ul li a:hover {
+  text-decoration: underline;
+}
+  
+   
+.description-text {
+    white-space: pre-wrap; 
+    display: inline-block;
+    max-width: 70%;
+    vertical-align: top;
+    }
+  
+.status-completed {
+    color: green;
+    font-weight: bold;
+  }
+  
+.status-pending {
+    color: orange;
+    font-weight: bold;
+  }
+
+  
+h1 {
+    color: #00796b; /* teal */
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    color: #444;
+  }
+  
+strong {
+    color: #004d40; /* darker teal for labels */
+  }
+  
+  a {
+    color: #00796b;
+    font-weight: 600;
+    text-decoration: none;
+    margin-right: 15px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .status-completed {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .status-pending {
+    color: orange;
+    font-weight: bold;
+  }
+
+  .edit{
+    text-align: center;
+    padding: 10px
+  }
+
+
+  .task-details p{
+    text-align: left;
+  }

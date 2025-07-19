@@ -20,6 +20,7 @@ from tasks import views
 from accounts import views as accounts_views
 
 urlpatterns = [
+    path('admin/',include('accounts.urls')),
     path('admin/', admin.site.urls),
     path('tasks/', include('tasks.urls')),
     path('accounts/', include('accounts.urls')),

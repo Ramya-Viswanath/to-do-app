@@ -1,0 +1,155 @@
+/* task_form.css */
+
+body {
+    background-color: #e0f7fa; /* match base */
+    font-family: "Roboto Condensed", sans-serif;
+    color: #333;
+  }
+
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796b; /* match base nav */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-nav a,
+  .main-nav button {
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .main-nav a:hover,
+  .main-nav button:hover {
+    text-decoration: underline;
+  }
+  
+  .nav-left a {
+    margin-right: 15px;
+  }
+  
+  .logout-form {
+    margin: 0;
+  }
+  
+  .form-container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    color: #00796b;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-group {
+    margin-bottom: 18px;
+  }
+  
+  label {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    color: #004d40;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="time"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #b0b0b0;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: "Roboto Condensed", sans-serif;
+  }
+  
+  textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+  
+  input:focus,
+  select:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #00796b;
+    box-shadow: 0 0 5px #4db6ac;
+  }
+  
+  .help-text {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 3px;
+  }
+  
+  .error {
+    color: #d60000;
+    font-size: 0.9rem;
+    margin-top: 4px;
+  }
+  
+  .btn {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: #004d40;
+  }
+  
+  .back-link {
+    display: block;
+    margin-top: 25px;
+    text-align: center;
+    color: #00796b;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .back-link:hover {
+    text-decoration: underline;
+  }
+  
+  .main-nav .page-title .title-name {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 40px
+  }
+
+  footer p {
+    text-align: center;  /* or right */
+    margin: 0;
+    padding: 10px 0;
+    color: #555;  /* optional color */
+    font-size: 0.9em;
+  }
